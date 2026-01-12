@@ -1,0 +1,27 @@
+Alkalmazott Statisztika 
+Egyéni gem
+Íme a három dobókockás feladat részletes levezetése, Word-be könnyen másolható, egysoros törtformátummal:
+
+Feladatmegoldás: Valószínűségszámítás (Három dobókocka összege)
+1. Az eseménytér meghatározása
+Három szabályos dobókockát egyszerre feldobva az összes lehetséges kimenetel száma a következő:
+Összes eset száma = 6 * 6 * 6 = 216
+2. A kedvező esetek meghatározása
+Keressük azokat a (x, y, z) számhármasokat, ahol 1 <= x, y, z <= 6, és az összegük x + y + z = 13.
+Csoportosítsuk a lehetőségeket a számok kombinációja szerint, majd nézzük meg azok variációit (sorrendjeit):
+6, 6, 1: variációk száma = 3! / 2! = 3 (661, 616, 166)
+6, 5, 2: variációk száma = 3! = 6 (652, 625, 562, 526, 265, 256)
+6, 4, 3: variációk száma = 3! = 6
+5, 5, 3: variációk száma = 3! / 2! = 3
+5, 4, 4: variációk száma = 3! / 2! = 3
+Kedvező esetek összege: 3 + 6 + 6 + 3 + 3 = 21
+
+3. A valószínűség kiszámítása
+A klasszikus valószínűségi modell alapján: P = Kedvező esetek / Összes eset
+P = 21 / 216
+Egyszerűsítés: Mind a számláló, mind a nevező osztható 3-mal:
+21 / 3 = 7
+216 / 3 = 72
+P = 7 / 72
+
+
