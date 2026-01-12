@@ -1,0 +1,24 @@
+Feladatmegoldás: Valószínűségszámítás (Érmefeldobás)
+1. Az eseménytér és a feltétel meghatározása
+A feladatban 11 szabályos érmét dobunk fel. Keressük annak a valószínűségét, hogy pontosan 1-gyel több fejet kapunk, mint írást.
+Jelölje f a fejek számát és i az írások számát. Tudjuk, hogy:
+f + i = 11 (összesen 11 érme van)
+f = i + 1 (eggyel több a fej)
+Behelyettesítve az első egyenletbe: 
+(i + 1) + i = 11 
+2i + 1 = 11 
+2i = 10 
+i = 5
+Tehát akkor teljesül a feltétel, ha 6 fejet és 5 írást dobunk.
+
+2. A valószínűség kiszámítása (Binomiális eloszlás)
+Mivel minden dobásnál a fej valószínűsége p = 1/2, az összes kimenetel száma pedig 2 a 11-en, a klasszikus valószínűségi modellt vagy a binomiális eloszlást használhatjuk.
+Összes eset száma: 2^11 = 2048
+Kedvező esetek száma: Hányféleképpen választható ki a 11 pozícióból a 6 fej helye? (11 alatt a 6) (11 alatt a 6) = (11 * 10 * 9 * 8 * 7 * 6) / (6 * 5 * 4 * 3 * 2 * 1) (11 alatt a 6) = 462
+
+3. Végeredmény levezetése
+A keresett valószínűség: P = 462 / 2048
+Egyszerűsítés: Mind a számláló, mind a nevező osztható 2-vel: 462 / 2 = 231 2048 / 2 = 1024
+P = 231 / 1024
+
+
