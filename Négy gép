@@ -1,0 +1,36 @@
+Feladatmegoldás: Valószínűségszámítás (Bayes-tétel)
+1. Adatok kigyűjtése és jelölések
+Először határozzuk meg a gépek gyártási adatait és a minőségi mutatókat. Legyen A az esemény, amely azt jelöli, melyik gép gyártotta az alkatrészt, és J az az esemény, hogy az alkatrész jó.
+Összes darabszám: 510+203+1108+179=2000 darab.
+Gépek választásának valószínűsége (P(A)):
+P(A1) = 510 / 2000
+P(A2) = 203 / 2000
+P(A3) = 1108 / 2000
+P(A4) = 179 / 2000
+Jó alkatrész valószínűsége gépenként (P(J|A)): (A megadott selejtarányok alapján: 100% - selejt%)
+P(J|A1) = 100% - 8% = 92% (azaz 0,92)
+P(J|A2) = 100% - 14% = 86% (azaz 0,86)
+P(J|A3) = 100% - 4% = 96% (azaz 0,96)
+P(J|A4) = 100% - 3% = 97% (azaz 0,97)
+
+2. A teljes valószínűség kiszámítása
+Meg kell határoznunk annak az esélyét, hogy egy találomra kiválasztott alkatrész jó. Ehhez a teljes valószínűség tételéthasználjuk:
+P(J)=P(A1)⋅P(J∣A1)+P(A2)⋅P(J∣A2)+P(A3)⋅P(J∣A3)+P(A4)⋅P(J∣A4)
+A számítás közös nevezővel (2000 * 100 = 200 000):
+gép ága: 510⋅92=46920
+gép ága: 203⋅86=17458
+gép ága: 1108⋅96=106368
+gép ága: 179⋅97=17363
+Összesen: P(J)=(46920+17458+106368+17363)/200000=188109/200000
+
+3. A Bayes-tétel alkalmazása
+A kérdés az, hogy mi a valószínűsége, hogy a terméket a 4. gép gyártotta, feltéve, hogy az jó: P(A4∣J).
+A képlet: P(A4∣J)=P(J)P(A4)⋅P(J∣A4)​
+Behelyettesítés: P(A4∣J)=188109/20000017363/200000​
+Egyszerűsítés után a 200 000-es értékek kiesnek, így megkapjuk a végeredményt: P(A4|J) = 17 363 / 188 109
+
+Végeredmény
+A helyes válasz a feladatlapon a második opció: 17363 / 188109.
+
+
+
