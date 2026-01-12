@@ -39,3 +39,54 @@ cov(X, Y) = -44 / 100
 Egyszerűsítve: cov(X, Y) = -11 / 25
 
 
+
+
+Oldd meg a következő feladatot úgy, hogy könnyen másolható legyen wordbe, a törtek / formátumban legyenek: Egy dobozban 8 cédula van, rajtuk a 21, 21, 11, 11, 23, 12, 23, 32 számokkal.  
+Egy véletlenszerűen kihúzott cédula esetén jelentse X az első, Y a második számjegyét.  
+Ekkor X és Y 2. kérdésVálasszon ki egyet: a. függetlenek és cov(X,Y)=19/16 b. nem függetlenek és cov(X,Y)=11/16 c. nem függetlenek és cov(X,Y)=3/16 d. nem függetlenek és cov(X,Y)=−13/16 e. függetlenek és cov(X,Y)=−5/16 f. függetlenek és cov(X,Y)=3/16 g. Passz. 
+Alkalmazott Statisztika 
+Egyéni gem
+Ez a feladat a kétdimenziós diszkrét valószínűségi változók elemzéséről szól. A kovariancia kiszámításához meg kell határoznunk az egyes számjegyek eloszlását és várható értékeit.
+Íme a részletes levezetés Word-be másolható formátumban:
+
+Feladatmegoldás: Valószínűségszámítás (Kovariancia és függetlenség)
+1. Az adatok kigyűjtése
+A dobozban lévő 8 cédula: 21, 21, 11, 11, 23, 12, 23, 32. A lehetséges (X, Y) számpárok (első és második számjegy):
+(2, 1) - 2 darab
+(1, 1) - 2 darab
+(2, 3) - 2 darab
+(1, 2) - 1 darab
+(3, 2) - 1 darab
+
+2. Várható értékek kiszámítása (E)
+X (első számjegy) eloszlása:
+X = 1: 3 esetben (11, 11, 12) -> P(X=1) = 3/8
+X = 2: 4 esetben (21, 21, 23, 23) -> P(X=2) = 4/8 = 1/2
+X = 3: 1 esetben (32) -> P(X=3) = 1/8
+E(X) = 1 * (3/8) + 2 * (4/8) + 3 * (1/8) = (3 + 8 + 3) / 8 = 14 / 8 = 7 / 4
+Y (második számjegy) eloszlása:
+Y = 1: 4 esetben (21, 21, 11, 11) -> P(Y=1) = 4/8 = 1/2
+Y = 2: 2 esetben (12, 32) -> P(Y=2) = 2/8 = 1/4
+Y = 3: 2 esetben (23, 23) -> P(Y=3) = 2/8 = 1/4
+E(Y) = 1 * (4/8) + 2 * (2/8) + 3 * (2/8) = (4 + 4 + 6) / 8 = 14 / 8 = 7 / 4
+E(X*Y) (a szorzat várható értéke): Összeszorozzuk a számjegyeket minden cédulán és átlagoljuk:
+2*1 (2-szer) = 2 + 2 = 4
+1*1 (2-szer) = 1 + 1 = 2
+2*3 (2-szer) = 6 + 6 = 12
+1*2 (1-szer) = 2
+3*2 (1-szer) = 6
+E(X*Y) = (4 + 2 + 12 + 2 + 6) / 8 = 26 / 8 = 13 / 4
+
+3. Kovariancia és függetlenség meghatározása
+Kovariancia képlete: cov(X, Y) = E(X*Y) - E(X) * E(Y)
+cov(X, Y) = 13/4 - (7/4 * 7/4)
+cov(X, Y) = 13/4 - 49/16
+Közös nevező (16): cov(X, Y) = 52/16 - 49/16
+cov(X, Y) = 3 / 16
+Függetlenség vizsgálata: Két valószínűségi változó csak akkor lehet független, ha a kovarianciájuk 0. Mivel cov(X, Y) = 3/16 (ami nem nulla), a változók nem függetlenek.
+
+Végeredmény
+A helyes válasz a c. opció: nem függetlenek és cov(X,Y) = 3/16.
+
+
+
