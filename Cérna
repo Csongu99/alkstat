@@ -1,0 +1,26 @@
+Feladatmegoldás: Valószínűségszámítás (Cérnavágás és maximum keresése)
+1. Az eloszlásfüggvény meghatározása
+Legyen a cérna hossza L=14 méter. A vágás helye legyen U, amely egyenletes eloszlást követ a [0,14] intervallumon. A keletkező két rész hossza U és 14−U. 
+A hosszabbik rész: ξ=max(U,14−U).
+Értelmezési tartomány: A hosszabbik rész sosem lehet rövidebb a teljes hossz felénél (14/2=7), és nem lehet hosszabb a teljes hossznál (14). 
+Tehát ξ értéke a [7,14] intervallumba esik.
+Az eloszlásfüggvény (F(x)) levezetése 7<x<14 esetén: F(x)=P(ξ<x)=P(max(U,14−U)<x) Ez akkor teljesül, ha mindkét rész kisebb, mint x: P(U<x eˊs 14−U<x) P(14−x<U<x)
+Mivel U egyenletes eloszlású a [0,14] tartományon, a valószínűség a kedvező intervallum hossza osztva a teljes hosszal:F(x)=(x−(14−x))/14=(2x−14)/14=(x−7)/7
+A feleletválasztós kérdés helyes válasza: F(x) = (x - 7) / 7, ha 7 < x < 14
+
+2. Valószínűség kiszámítása: P(169/16 < ξ < 171/16)
+Használjuk az eloszlásfüggvényt: P(a<ξ<b)=F(b)−F(a). a=169/16=10,5625 b=171/16=10,6875
+Mivel mindkét érték a [7,14] tartományba esik: F(171/16)=(171/16−7)/7=(171/16−112/16)/7=(59/16)/7=59/112F(169/16)=(169/16−7)/7=(169/16−112/16)/7=(57/16)/7=57/112
+P(169/16 < \xi < 171/16) = 59/112 - 57/112 = 2/112 = 1/56 (Tizedes törtként: ~0,01786)
+
+3. Várható érték kiszámítása: E(ξ)
+Mivel F(x)=(x−7)/7, a sűrűségfüggvény ennek deriváltja: f(x)=1/7 a [7,14] intervallumon. 
+Ez egy egyenletes eloszlás a [7,14] tartományon. Egyenletes eloszlás várható értéke az intervallum két végpontjának átlaga: E(ξ)=(7+14)/2=21/2=10,5
+Válasz 2: E(ξ) = 21/2 (vagy 10,5)
+
+Végeredmény összefoglalása:
+Eloszlásfüggvény: F(x) = (x - 7) / 7, 7 < x < 14
+Valószínűség: 1/56
+Várható érték: 21/2 (vagy 10,5)
+
+
