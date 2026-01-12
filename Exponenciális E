@@ -1,0 +1,15 @@
+Feladatmegoldás: Valószínűségszámítás (Exponenciális eloszlás)
+1. Adatok és az eloszlás paraméterei
+A feladat szerint a várakozási idő (X) exponenciális eloszlást követ.
+Átlagos várakozási idő (várható érték): E(X)=2 perc
+Az eloszlás paramétere (λ): Mivel exponenciális eloszlásnál E(X)=1/λ, ezért λ=1/2
+2. Elméleti háttér: A felejtékenység
+Az exponenciális eloszlás felejtékeny tulajdonsága azt jelenti, hogy ha már vártunk valamennyi időt, annak a valószínűsége, hogy további t időt kell várnunk, megegyezik azzal, mintha az elejéről kezdtük volna a várakozást. Képletben: P(X>s+t∣X>s)=P(X>t)
+A feladatban a barátunk a várakozás kezdetekor (s=0) hív fel, és t=2 perc múlva érkezik meg. Annak a valószínűsége, hogy ekkor még sorban állunk, azt jelenti, hogy a várakozási időnk hosszabb, mint 2 perc.
+3. Számítás lépésről lépésre
+Az exponenciális eloszlás túlélési függvénye (annak a valószínűsége, hogy a várakozás hosszabb, mint egy adott t idő):P(X>t)=e−(λ∗t)
+Behelyettesítve a megadott értékeket (λ=1/2 és t=2):
+P(X>2)=e−(1/2∗2)
+P(X>2)=e−1
+
+
