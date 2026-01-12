@@ -1,0 +1,33 @@
+Feladatmegoldás: Valószínűségszámítás (Golyós feladat)
+1. Az adatok kigyűjtése
+A doboz tartalma és a húzás feltételei:
+Kék golyók száma: 3 darab
+Piros golyók száma: 3 darab
+Sárga golyók száma: 3 darab
+Összes golyó (N): 3 + 3 + 3 = 9 darab
+Húzott golyók száma (n): 4 darab
+Mintavételezés módja: Visszatevés nélkül
+A kívánt esemény összeállítása:
+1 kék golyó (a 3-ból)
+2 piros golyó (a 3-ból)
+1 sárga golyó (a 3-ból)
+
+2. A valószínűség kiszámítása (Klasszikus modell)
+A valószínűséget a kedvező esetek száma / összes eset száma képlettel számoljuk.
+Összes eset száma:
+Hányféleképpen választható ki a 9 golyóból 4 darab, ha a sorrend nem számít? (Kombináció)
+N_összes = (9 alatt a 4) = (9 * 8 * 7 * 6) / (4 * 3 * 2 * 1) = 3024 / 24 = 126
+Kedvező esetek száma:
+Külön-külön megnézzük a színek kiválasztásának lehetőségeit, majd ezeket összeszorozzuk:
+Kék golyó: (3 alatt az 1) = 3
+Piros golyó: (3 alatt a 2) = 3
+Sárga golyó: (3 alatt az 1) = 3
+N_kedvező = 3 * 3 * 3 = 27
+
+3. Végeredmény levezetése
+A keresett valószínűség (P):
+P = 27 / 126
+Egyszerűsítés: Mind a számláló, mind a nevező osztható 9-cel:
+27 / 9 = 3
+126 / 9 = 14
+P = 3 / 14
