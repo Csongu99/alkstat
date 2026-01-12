@@ -1,0 +1,39 @@
+Feladatmegoldás: Valószínűségszámítás (Számösszeg esélye)
+1. Az eseménytér meghatározása
+Két halmazból választunk véletlenszerűen egy-egy számot.
+Első halmaz (A): [10, 6, -3, 4] -> 4 elem
+Második halmaz (B): [-6, -5, 9, -5] -> 4 elem
+Az összes lehetséges párosítás száma:
+Összes eset száma = 4 * 4 = 16
+
+2. A kedvező esetek meghatározása
+Azt keressük, hány esetben lesz a választott számok összege pozitív (nagyobb, mint 0). Nézzük végig az első halmaz elemei szerint:
+Ha az első szám a 10:
+10 + (-6) = 4 (pozitív)
+10 + (-5) = 5 (pozitív)
+10 + 9 = 19 (pozitív)
+10 + (-5) = 5 (pozitív)
+(4 kedvező eset)
+Ha az első szám a 6:
+6 + (-6) = 0 (nem pozitív)
+6 + (-5) = 1 (pozitív)
+6 + 9 = 15 (pozitív)
+6 + (-5) = 1 (pozitív)
+(3 kedvező eset)
+Ha az első szám a -3:
+-3 + (-6) = -9
+-3 + (-5) = -8
+-3 + 9 = 6 (pozitív)
+-3 + (-5) = -8
+(1 kedvező eset)
+Ha az első szám a 4:
+4 + (-6) = -2
+4 + (-5) = -1
+4 + 9 = 13 (pozitív)
+4 + (-5) = -1
+(1 kedvező eset)
+Kedvező esetek összesen: 4 + 3 + 1 + 1 = 9
+
+3. A valószínűség kiszámítása
+A klasszikus valószínűségi modell alapján: P = Kedvező esetek / Összes eset
+P = 9 / 16
