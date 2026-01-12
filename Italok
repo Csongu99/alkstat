@@ -1,0 +1,21 @@
+Feladatmegoldás: Kombinatorika (Italválasztás)
+A feladat két jól elkülöníthető részből áll: egy variációs és egy kombinációs kérdésből.
+1. Rész: Italok elfogyasztása (Variáció)
+Kérdés: 12 különböző italból óránként megiszol egyet, összesen négyet. Hányféleképpen teheted meg, ha a sorrend számít (sörre bor nem egyenlő borra sör)?
+Összes elem (n): 12
+Kiválasztott elem (k): 4
+Modell: Mivel a sorrend számít és nem ismétlünk (mindegyikből 1-1 üveg van), ismétlés nélküli variációthasználunk.
+Számítás: A lehetőségek száma = 12 * 11 * 10 * 9 A lehetőségek száma = 11880
+
+2. Rész: Az ajándék összeállítása (Kombináció)
+Kérdés: Miután végeztél 4 üveggel, a maradékból kell választanod 2 üveget ajándékba. Hányféleképpen választhatod ki az ajándékot?
+Maradék készlet (n): Eredetileg 12 volt, de 4 elfogyott, így 12 - 4 = 8 üveg maradt.
+Kiválasztandó ajándék (k): 2 üveg.
+Modell: Az ajándékba adott két üvegnél a sorrend már nem számít, ezért ismétlés nélküli kombinációt (binomiális együtthatót) használunk.
+Számítás (8 alatt a 2): A lehetőségek száma = (8 * 7) / (2 * 1) A lehetőségek száma = 56 / 2 A lehetőségek száma = 28
+
+Végeredmény összefoglalása
+Az italok elfogyasztásának módja: 11880
+Az ajándék kiválasztásának módja: 28
+
+
