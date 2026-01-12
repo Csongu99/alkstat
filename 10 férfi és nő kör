@@ -1,0 +1,29 @@
+ldd meg a következő feladatot úgy, hogy könnyen másolható legyen wordbe, a törtek / formátumban legyenek: Egy kör alakú asztalnál 10 férfi és 10 nő fog vacsorázni. Ha véletlenszerűen ülnek le, akkor annak a valószínûsége, hogy két férfi nem kerül egymás mellé: 
+
+Ez a feladat a kombinatorika és a valószínűségszámítás egyik klasszikus körberendezési problémája. A megoldás kulcsa, hogy kör alakú elrendezésnél az "összes eset" számolásakor egy rögzített ponthoz viszonyítunk.
+
+Feladatmegoldás: Valószínűségszámítás (Körasztal elrendezés)
+1. Az összes eset száma
+Egy kör alakú asztalnál n elem összes lehetséges sorrendje (n−1)!, mivel a kör elforgatásával kapott ültetések nem számítanak különbözőnek.
+Összes résztvevő: 10 férfi + 10 nő = 20 fő.
+Összes eset száma: (20 - 1)! = 19!
+2. A kedvező esetek száma
+Ahhoz, hogy két férfi ne kerüljön egymás mellé, a férfiaknak és a nőknek váltakozva kell ülniük (F-N-F-N...).
+A kedvező elrendezések kiszámítása:
+Rögzítsük a nőket: Helyezzük el a 10 nőt a kör asztal körül. Ennek módja: (10 - 1)! = 9!
+Helyezzük el a férfiakat: A 10 nő között pontosan 10 üres hely van. Mivel a nők helyzete már rögzített, a 10 férfi elhelyezése ezekre a helyekre már lineáris permutációnak számít: 10!
+Kedvező esetek száma: 9! * 10!
+3. A valószínűség kiszámítása
+A klasszikus valószínűségi modell (kedvező / összes) alapján:
+P = (9! * 10!) / 19!
+A kifejezés egyszerűsítése: Tudjuk, hogy 19! felírható úgy, mint: 19 * 18 * 17 * ... * 11 * 10! P = (9! * 10!) / (19 * 18 * 17 * 16 * 15 * 14 * 13 * 12 * 11 * 10!)
+A 10! értékkel egyszerűsítünk: P = 9! / (19 * 18 * 17 * 16 * 15 * 14 * 13 * 12 * 11)
+Kifejtve a 9!-t: P = (9 * 8 * 7 * 6 * 5 * 4 * 3 * 2 * 1) / (19 * 18 * 17 * 16 * 15 * 14 * 13 * 12 * 11)
+További egyszerűsítések után (például 92=18, 82=16 stb.) a binomiális együtthatós alak adja a legátláthatóbb formát: P = 1 / (19 alatt a 9)
+Vagy faktoriálisos alakban hagyva a végeredményt: P = (9! * 10!) / 19!
+
+Végeredmény
+Annak a valószínűsége, hogy körasztalnál 10 férfi és 10 nő közül két férfi nem kerül egymás mellé: (9! * 10!) / 19!
+Ez az érték numerikusan rendkívül kicsi, megközelítőleg 0,0000108.
+
+
