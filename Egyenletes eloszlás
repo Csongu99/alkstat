@@ -1,0 +1,20 @@
+Feladatmegoldás: Valószínűségszámítás (Folytonos egyenletes eloszlás)
+1. Adatok és az eloszlás meghatározása
+A feladat szerint a várakozási idő (T) folytonos egyenletes eloszlást követ egy meghatározott intervallumon.
+A teljes intervallum alsó határa (a): 3/5
+A teljes intervallum felső határa (b): 2
+A keresett részintervallum kezdete (x1): 6/5
+A keresett részintervallum vége (x2): 8/5
+2. Elméleti háttér
+Folytonos egyenletes eloszlás esetén a valószínűség kiszámítása a következő képlettel történik:
+P(x1 < T < x2) = (Részintervallum hossza) / (Teljes intervallum hossza)
+Vagyis: P = (x2 - x1) / (b - a)
+
+3. Számítás lépésről lépésre
+A) A teljes intervallum hossza (nevező): Mivel a felső határ 2, ezt átírjuk ötödökbe az egyszerűbb számoláshoz: 2 = 10/5 Hossz = 10/5 - 3/5 = 7/5
+B) A kérdéses részintervallum hossza (számláló): Hossz = 8/5 - 6/5 = 2/5
+C) A valószínűség kiszámítása: P = (2/5) / (7/5)
+A törtekkel való osztásnál a nevező reciprokával (fordítottjával) szorzunk: P = (2/5) * (5/7)
+Az 5-ös értékekkel való egyszerűsítés után megkapjuk a végeredményt: P = 2 / 7
+
+
